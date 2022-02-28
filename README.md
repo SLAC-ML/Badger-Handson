@@ -9,13 +9,11 @@ Please do these before the hands-on session, since the setup could take tens of 
 ### 0. Clone the repo
 
 Run the following command in terminal:
-
 ```
 git clone https://github.com/SLAC-ML/Badger-Handson.git
 ```
 
 Then `cd` to the root of the cloned repo:
-
 ```
 cd Badger-Handson
 ```
@@ -28,7 +26,6 @@ Badger and its plugins are python-based packages/scripts, so a proper python env
 
 1. [Install docker](https://docs.docker.com/get-docker/) if you haven't done so already. You can follow the tutorial showed up when you launch docker for the first time to get a feeling of what docker is about
 2. Pull the pre-configured Badger docker image onto your computer:
-
     ```
     docker pull slacml/badger-handson
     ```
@@ -39,14 +36,12 @@ Badger and its plugins are python-based packages/scripts, so a proper python env
 
 1. [Install conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html#regular-installation) if you haven't done so already
 2. List all conda environments on your computer:
-
     ```
     conda env list
     ```
     and make sure you don't have an environment named `badger`.
 
     Then create the badger conda environment with the given yaml env file:
-
     ```
     conda env create -f environment.yml
     ```
