@@ -1,6 +1,6 @@
 # Badger Hands-on Session
 
-Welcome to the Badger hands-on sessions! Please read through this simple guide before the hands-on session to get ready for it :)
+Welcome to the Badger hands-on sessions! Please read through the [prerequisites](#prerequisites) section before the hands-on session to get ready for it :)
 
 ## Prerequisites
 
