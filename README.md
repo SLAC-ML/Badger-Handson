@@ -9,11 +9,13 @@ Please do these before the hands-on session, since the setup could take tens of 
 ### 0. Clone the repo
 
 Run the following command in terminal:
+
 ```
 git clone https://github.com/SLAC-ML/Badger-Handson.git
 ```
 
 Then `cd` to the root of the cloned repo:
+
 ```
 cd Badger-Handson
 ```
