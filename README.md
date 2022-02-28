@@ -36,6 +36,38 @@ Badger and its plugins are python-based packages/scripts, so a proper python env
     The docker image is around 2.5GB so it would take some time to get downloaded. When the pulling is done, run `docker images` to make sure the image is listed there
 3. [Install XQuartz](https://www.xquartz.org/) if you are using a mac. In order to expose the GUI from within the Badger docker images, we need to forward the GUI to an X window system, which is provided by XQuartz
 
+After the installation, for the mac users, you'll need to check the `Allow connections from network clients` option under the `Security` tab of the XQuartz preference, as shown below:
+
+![XQuartz pref](images/XQuartz_pref.png)
+
+If you choose to go with the docker option, a set of bash scripts are provided to make life easier:
+
+- Run Badger in docker:
+
+    ```
+    ./run.sh
+    ```
+
+- Use Badger in docker again after quit the container:
+
+    ```
+    ./resume.sh
+    ```
+
+- Run Badger in docker and delete the container when quit:
+
+    ```
+    ./run_once.sh
+    ```
+
+    Note that Badger that launched by `run_once.sh` cannot be resumed after quit!
+
+- Remove the Badger docker container and reset other system settings:
+
+    ```
+    ./clean_up.sh
+    ```
+
 #### Install Badger with conda
 
 1. [Install conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html#regular-installation) if you haven't done so already
