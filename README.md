@@ -87,6 +87,8 @@ If you choose to go with the docker option, a set of bash scripts are provided t
 
 ## Beginner's Tasks
 
+These [slides](https://docs.google.com/presentation/d/1vIbZp_Gyw0IjGwkqmY4oChuS0R-5dBAAVQt0hAsQGes/edit?usp=sharing) contain some cheat sheets and solutions to the following tasks, so please give it a look when you get stuck!
+
 ### 0. Configure Badger
 
 Tell Badger where to find:
