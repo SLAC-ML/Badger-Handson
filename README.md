@@ -27,7 +27,7 @@ Badger and its plugins are python-based packages/scripts, so a proper python env
 #### Install Badger with docker
 
 1. [Install docker](https://docs.docker.com/get-docker/) if you haven't done so already. You can follow the tutorial showed up when you launch docker for the first time to get a feeling of what docker is about
-2. Pull the pre-configured Badger docker image onto your computer:
+2. Pull the pre-configured Badger docker image into your computer:
 
     ```
     docker pull slacml/badger-handson
