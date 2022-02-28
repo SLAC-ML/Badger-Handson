@@ -27,7 +27,7 @@ class Interface(interface.Interface):
     def get_default_params():
         return {
             'channel_prefix': 'c',
-            'channel_count': 16
+            'channel_count': 8
         }
 
     def get_value(self, channel: str):

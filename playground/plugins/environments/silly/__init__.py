@@ -15,14 +15,6 @@ class Environment(environment.Environment):
         'q6': 'c6',
         'q7': 'c7',
         'q8': 'c8',
-        'q9': 'c9',
-        'q10': 'c10',
-        'q11': 'c11',
-        'q12': 'c12',
-        'q13': 'c13',
-        'q14': 'c14',
-        'q15': 'c15',
-        'q16': 'c16',
     }
 
     def __init__(self, interface: Interface, params):
@@ -30,9 +22,7 @@ class Environment(environment.Environment):
 
     @staticmethod
     def list_vars():
-        return ['q1', 'q2', 'q3', 'q4',
-                'q5', 'q6', 'q7', 'q8',
-                'q9', 'q10', 'q11', 'q12']
+        return ['q1', 'q2', 'q3', 'q4']
 
     @staticmethod
     def list_obses():
@@ -51,7 +41,7 @@ class Environment(environment.Environment):
     def _get_obs(self, obs):
         if obs == 'l1':
             values = self.interface.get_values(
-                ['c1', 'c2', 'c3', 'c4', 'c5', 'c6', 'c7', 'c8'])
+                ['c1', 'c2', 'c3', 'c4', 'c5', 'c6'])
             return np.sum(np.abs(values))
         elif obs == 'l2':
             return self.interface.get_value('norm')
