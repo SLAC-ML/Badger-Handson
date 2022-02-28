@@ -2,6 +2,8 @@
 
 Welcome to the Badger hands-on sessions! Please read through the [prerequisites](#prerequisites) section before the hands-on session to get ready for it :)
 
+A video for the instruction part of the first hands-on session can be found [here](https://wena.d.pr/Ep7965).
+
 ## Prerequisites
 
 Please do these before the hands-on session, since the setup could take tens of minutes or even longer, based on your network condition. Thank you!
