@@ -159,7 +159,7 @@ This task should be done w/ Badger GUI.
 
 ### 5*. Add noise to the `norm_emit` observation
 
-- [ ] Read code of the `_get_obs` function in `plugins/environments/__init__.py`
+- [ ] Read code of the `_get_obs` function in `plugins/environments/inj_surrogate/__init__.py`
 - [ ] Add a Gaussian noise ~ `N(0, 0.01)` to the `norm_emit` observation. To generate a Gaussian noise ~ `N(mu, sigma^2)`, in Python one could:
 
     ```python
