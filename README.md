@@ -111,6 +111,7 @@ This task should be done w/ Badger GUI.
 
     - Minimize `norm_emit`
 
+    We'll refer to this routine config lately as `routine config X`
 - [ ] Use the default params of `simplex` algo, run the routine, save the optimal to logbook
 - [ ] Set the `start_from_current` hyperparameter of `simplex` algo to `false`, run the routine
 - [ ] Tune the `x0` hyperparameter (the initial solution) to make the routine work, save the optimal to logbook, reset the environment
@@ -120,7 +121,7 @@ This task should be done w/ Badger GUI.
     sigma_x < 0.15
     ```
 
-    to the routine we just run, **WITHOUT configuring everything from the beginning** (note that we didn't save the routine)
+    to `routine config X`, **WITHOUT configuring everything from the beginning** (note that we didn't save the routine)
 - [ ] Switch the algorithm to `basic_bo`, run the optimization again, save the optimal to logbook, reset the environment
 - [ ] Delete all the failed runs in this task
 
@@ -136,9 +137,11 @@ This task should be done w/ Badger GUI.
     noise = sigma * np.random.randn() + mu
     ```
 
-### 6*. Create a constant optimizer!
+### 6*. Create a constant optimizer (noise meter)!
 
-- [ ] Based on `silly` algorithm plugin, create a `const` algorithm plugin that simply repeatly evaluates the initial solution for a given `max_iter` times
+- [ ] Based on `silly` algorithm plugin, create a `const` algorithm plugin that repeatly evaluates the initial solution for a given times
+- [ ] Use your `const` algorithm to optimize `routine config X`
+- [ ] Change the objective in `routine config X` to `norm_emit_x`, use your `const` algorithm to optimize the modified problem
 
 ---
 
