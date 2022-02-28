@@ -2,3 +2,4 @@ __pycache__
 .DS_Store
 /playground/logbook
 /playground/runs
+/playground/plugins/__init__.py
