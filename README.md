@@ -33,7 +33,7 @@ Badger and its plugins are python-based packages/scripts, so a proper python env
     docker pull slacml/badger-handson
     ```
 
-    The docker image is around 6GB so it would take some time to get downloaded. When the pulling is done, run `docker images` to make sure the image is listed there
+    The docker image is around 2.5GB so it would take some time to get downloaded. When the pulling is done, run `docker images` to make sure the image is listed there
 3. [Install XQuartz](https://www.xquartz.org/) if you are using a mac. In order to expose the GUI from within the Badger docker images, we need to forward the GUI to an X window system, which is provided by XQuartz
 
 #### Install Badger with conda
@@ -64,7 +64,7 @@ Tell Badger where to find:
 - [ ] Logbook
 - [ ] Archived runs
 
-### 1. Silly vs. Silly
+### 1. Hello world
 
 This task should be done w/ Badger CLI.
 
@@ -74,7 +74,19 @@ This task should be done w/ Badger CLI.
 - [ ] Modify `tasks/01/config.yaml` to limit the viable range of `q1` to `[0.4, 0.6]`, run and save the routine as `helloworld`
 - [ ] Rerun the `helloworld` routine you just saved
 
-### 2. Silly face
+### 2. Constrainted optimization
+
+This task should be done w/ Badger GUI.
+
+- [ ] Launch the Badger GUI
+- [ ] Load the `helloworld` routine
+- [ ] Add `l1` as a constraint, set the rule:
+
+    ```
+    l1 < 0.5
+    ```
+
+    And make it a hard constraint, run the optimization and save the routine as `keepsafe`
 
 ---
 
