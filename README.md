@@ -60,7 +60,7 @@ Badger and its plugins are python-based packages/scripts, so a proper python env
 Tell Badger where to find:
 
 - [ ] Plugins
-- [ ] Datebase (routines)
+- [ ] Database (routines)
 - [ ] Logbook
 - [ ] Archived runs
 
@@ -86,7 +86,59 @@ This task should be done w/ Badger GUI.
     l1 < 0.5
     ```
 
-    And make it a hard constraint, run the optimization and save the routine as `keepsafe`
+    And make it a hard constraint, run the optimization, keep going until alert being triggered 3 times
+
+### 3. Add extra variables on the fly
+
+This task should be done w/ Badger GUI.
+
+- [ ] Load the `helloworld` routine
+- [ ] Set all available `silly` environment variables (`q1`, `q2`, `q3`, `q4`) to be optimization variables
+- [ ] Try to also add `q5`, `q7`, and `q9` as optimization variables, run the optimization
+
+### 4. Let's do some real thing
+
+This task should be done w/ Badger GUI.
+
+- [ ] Create a new routine with `simplex` algorithm and `inj_surrogate` environment
+- [ ] Set optimization variables to be:
+
+    - `SOL1:solenoid_field_scale`
+    - `CQ01:b1_gradient`
+    - `SQ01:b1_gradient`
+
+    And optimization objective to be:
+
+    - Minimize `norm_emit`
+
+- [ ] Use the default params of `simplex` algo, run the routine, save the optimal to logbook
+- [ ] Set the `start_from_current` hyperparameter of `simplex` algo to `false`, run the routine
+- [ ] Tune the `x0` hyperparameter (the initial solution) to make the routine work, save the optimal to logbook, reset the environment
+- [ ] Close and relaunch Badger GUI, figure out a way to add a hard constraint:
+
+    ```
+    sigma_x < 0.15
+    ```
+
+    to the routine we just run, **WITHOUT configuring everything from the beginning** (note that we didn't save the routine)
+- [ ] Switch the algorithm to `basic_bo`, run the optimization again, save the optimal to logbook, reset the environment
+- [ ] Delete all the failed runs in this task
+
+### 5*. Add noise to the `norm_emit` observation
+
+- [ ] Read code of the `_get_obs` function in `plugins/environments/__init__.py`
+- [ ] Add a Gaussian noise ~ `N(0, 0.01)` to the `norm_emit` observation. To generate a Gaussian noise ~ `N(mu, sigma^2)`, in Python one could:
+
+    ```python
+    import numpy as np
+
+
+    noise = sigma * np.random.randn() + mu
+    ```
+
+### 6*. Create a constant optimizer!
+
+- [ ] Based on `silly` algorithm plugin, create a `const` algorithm plugin that simply repeatly evaluates the initial solution for a given `max_iter` times
 
 ---
 
