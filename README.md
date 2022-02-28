@@ -27,5 +27,22 @@ Badger and its plugins are python-based packages/scripts, so a proper python env
 
 ## Beginner's Tasks
 
+### 0. Configure Badger
+
+Tell Badger where to find:
+
+- [] Plugins
+- [] Datebase (routines)
+- [] Logbook
+- [] Archived runs
+
+### 1. Silly vs. Silly
+
+- [] Investigate `silly` algo to see the hyperparameters
+- [] Investigate `silly` env to see the available variables/observations
+- [] Use `silly` algorithm to optimize `silly` environment with the routine config given in `tasks/01/config.yaml`
+- [] Modify `tasks/01/config.yaml` to limit the viable range of `q1` to `[0.4, 0.6]`, run and save the routine as `helloworld`
+
+---
 
 Questions? Contact us on [slack](https://join.slack.com/share/enQtMzE2MjQ2OTI5MzY5OC00NzdkODkxY2NjN2IzYjIxOTBiMTBkMTQwMTVhYTYxOTc2NWEyYjczYTI2YjNkZjk4MzgzM2EyODJjNGY1YzE1), [email](mailto:zhezhang@slac.stanford.edu)
