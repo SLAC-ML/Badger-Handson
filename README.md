@@ -17,7 +17,7 @@ Badger and its plugins are python-based packages/scripts, so a proper python env
 #### Install Badger with docker
 
 1. [Install docker](https://docs.docker.com/get-docker/) if you haven't done so already. You can follow the tutorial showed up when you launch docker for the first time to get a feeling of what docker is about
-2. Run `docker pull slacml/badger:handson` to pull the pre-configured Badger docker image onto your computer. The docker image is around 6GB so it would take some time to get downloaded. When the pulling is done, run `docker images` to make sure the image is listed there
+2. Run `docker pull slacml/badger-handson` to pull the pre-configured Badger docker image onto your computer. The docker image is around 6GB so it would take some time to get downloaded. When the pulling is done, run `docker images` to make sure the image is listed there
 3. [Install XQuartz](https://www.xquartz.org/) if you are using a mac. In order to expose the GUI from within the Badger docker images, we need to forward the GUI to an X window system, which is provided by XQuartz
 
 #### Install Badger with conda
